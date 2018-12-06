@@ -1,0 +1,12 @@
+import numpy as np
+
+E1=12 #volts
+E2=9 #volts
+R1=100 #ohms
+R2=120 #ohms
+R3=65 #ohms
+
+A=np.matrix([[1,1,-1],[R1,0,R2],[0,R2,R3]])
+r=np.matrix([[0],[E1],[E2]])
+v=np.linalg.solve(A,r)
+print v
